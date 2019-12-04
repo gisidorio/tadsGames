@@ -25,8 +25,8 @@ public class UsuarioDAO {
 
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";    //Driver do MySQL 8.0 em diante - Se mudar o SGBD mude o Driver
     private static final String LOGIN = "root";                         //nome de um usuário do banco de dados
-    private static final String SENHA = "!zxcASD50";                             //sua senha de acesso
-    private static String URL = "jdbc:mysql://dbgames.czyozk3ol6md.us-east-1.rds.amazonaws.com:3306/dbGames?useTimezone=true&serverTimezone=UTC";  //URL do banco de dados
+    private static final String SENHA = "adminadmin";
+    private static final String URL = "jdbc:mysql://localhost:3306/dbGames?useUnicode=yes&characterEncoding=UTF-8&useTimezone=true&serverTimezone=UTC";
     private static Connection conexao;
 
     /* recebe um usuário e retorna 1 caso os dados sejam salvos com sucesso
@@ -134,13 +134,13 @@ public class UsuarioDAO {
         String query = "SELECT f.idFuncionario,\n"
                 + " f.nomeFuncionario,\n"
                 + " f.sobrenome,\n"
+                + " u.nomeUsuario,\n"
                 + " f.departamento,\n"
                 + " f.cargo\n"
                 + " FROM Usuario u\n"
                 + " RIGHT JOIN Funcionario f\n"
                 + " ON u.idFuncionario = f.idFuncionario\n"
-                + " WHERE u.idFuncionario IS NULL\n"
-                + " AND f.ativo = true\n"
+                + " WHERE f.ativo = true\n"
                 + " AND f.idFuncionario = ?;";
 
         try {
@@ -157,6 +157,7 @@ public class UsuarioDAO {
                         rs.getInt("idFuncionario"),
                         rs.getString("nomeFuncionario"),
                         rs.getString("sobrenome"),
+                        rs.getString("nomeUsuario"),
                         rs.getString("departamento"),
                         rs.getString("cargo")
                 );

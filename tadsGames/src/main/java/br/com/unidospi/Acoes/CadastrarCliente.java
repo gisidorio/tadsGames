@@ -107,11 +107,6 @@ public class CadastrarCliente implements Executavel, Registravel{
             Cliente p = new Cliente(idEmpresa, nome, sobrenome, sexo, cpf, dtNasc, ativo) ;
             retorno = ClienteDAO.salvar(p);
             if (retorno > 0){
-//                HttpSession sessao = req.getSession();
-//                UsuarioFuncionario usuario = (UsuarioFuncionario)sessao.getAttribute("usuario");
-//                String acao = "cadastro de Cliente";
-//                GeraLog registro = new GeraLog();
-//                registro.escreverLog(usuario, acao, p);
                 
                 CadastrarCliente registra = new CadastrarCliente();
                 registra.gerarLog(req, resp);

@@ -98,10 +98,6 @@ public class EditarEmpresa implements Executavel, Registravel{
         retorno=empr.alterar();
             if(retorno){
                 HttpSession sessao = req.getSession();
-//                UsuarioFuncionario usuario = (UsuarioFuncionario)sessao.getAttribute("usuario");
-//                String acao = "edição de Empresa";
-//                GeraLog registro = new GeraLog();
-//                registro.escreverLog(usuario, acao, empr);
                 
                 sessao.setAttribute("empresa", empr);
                 EditarEmpresa registra = new EditarEmpresa();

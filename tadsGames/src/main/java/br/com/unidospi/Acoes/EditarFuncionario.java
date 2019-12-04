@@ -118,10 +118,6 @@ public class EditarFuncionario implements Executavel, Registravel {
             FuncionarioDAO.alterar(funcionario);
             
             HttpSession sessao = req.getSession();
-//            UsuarioFuncionario usuario = (UsuarioFuncionario)sessao.getAttribute("usuario");
-//            String acao = "edição de Funcionario";
-//            GeraLog registro = new GeraLog();
-//            registro.escreverLog(usuario, acao, funcionario);
             
             sessao.setAttribute("funcionario", funcionario);
             EditarFuncionario registra = new EditarFuncionario();

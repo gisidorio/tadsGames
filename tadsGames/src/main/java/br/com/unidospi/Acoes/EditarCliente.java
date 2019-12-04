@@ -102,11 +102,7 @@ public class EditarCliente implements Executavel, Registravel {
             retorno = ClienteDAO.alterar(c);
             if (retorno > 0) {
                 HttpSession sessao = req.getSession();//
-//                
-//                UsuarioFuncionario usuario = (UsuarioFuncionario)sessao.getAttribute("usuario");//
-//                String acao = "edição de Cliente";//
-//                GeraLog registro = new GeraLog();//
-//                registro.escreverLog(usuario, acao, c);//
+
                 
                 sessao.setAttribute("cliente", c);
                 EditarCliente registra = new EditarCliente();

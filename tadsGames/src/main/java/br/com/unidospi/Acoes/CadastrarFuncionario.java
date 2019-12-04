@@ -122,12 +122,7 @@ public class CadastrarFuncionario implements Executavel, Registravel {
                     idEmpresaSelecionada, nome, sobrenome, sexo, cpfStr,
                     dtNasc, status);
             FuncionarioDAO.salvar(funcionario);
-            
-//            HttpSession sessao = req.getSession();
-//            UsuarioFuncionario usuario = (UsuarioFuncionario)sessao.getAttribute("usuario");
-//            String acao = "cadastro de Funcionario";
-//            GeraLog registro = new GeraLog();
-//            registro.escreverLog(usuario, acao, funcionario);
+
             
             CadastrarFuncionario registra = new CadastrarFuncionario();
             registra.gerarLog(req, resp);

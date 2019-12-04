@@ -67,11 +67,6 @@ public class CadastrarProduto implements Executavel, Registravel{
             try {
                 retorno = ProdutoDAO.salvar(p);
                 if (retorno > 0) {
-//                HttpSession sessao = req.getSession();
-//                UsuarioFuncionario usuario = (UsuarioFuncionario)sessao.getAttribute("usuario");
-//                String acao = "cadastro de Produto";
-//                GeraLog registro = new GeraLog();
-//                registro.escreverLog(usuario, acao, p);
                 
                 CadastrarProduto registra = new CadastrarProduto();
                 registra.gerarLog(req, resp);

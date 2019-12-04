@@ -26,8 +26,8 @@ import java.util.logging.Logger;
 public class ClienteDAO {
     // &useTimezone=true&serverTimezone=UTC
     static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-    static final String URL = "jdbc:mysql://dbgames.czyozk3ol6md.us-east-1.rds.amazonaws.com:3306/dbGames?useUnicode=yes&characterEncoding=UTF-8&useTimezone=true&serverTimezone=UTC";
-    static final String SENHA = "!zxcASD50";
+    private static final String SENHA = "adminadmin";
+    private static final String URL = "jdbc:mysql://localhost:3306/dbGames?useUnicode=yes&characterEncoding=UTF-8&useTimezone=true&serverTimezone=UTC";
 
     static final String USUARIO = "root";
     static Connection conexao;

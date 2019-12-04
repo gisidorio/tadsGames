@@ -26,8 +26,8 @@ public class VendaDAO {
 
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";    //Driver do MySQL 8.0 em diante - Se mudar o SGBD mude o Driver
     private static final String LOGIN = "root";                         //nome de um usuário do banco de dados
-    private static final String SENHA = "!zxcASD50";                             //sua senha de acesso
-    private static String URL = "jdbc:mysql://dbgames.czyozk3ol6md.us-east-1.rds.amazonaws.com:3306/dbGames?useTimezone=true&serverTimezone=UTC";  //URL do banco de dados
+    private static final String SENHA = "adminadmin";
+    private static final String URL = "jdbc:mysql://localhost:3306/dbGames?useUnicode=yes&characterEncoding=UTF-8&useTimezone=true&serverTimezone=UTC";
     private static Connection conexao;
 
     /* recebe um usuário e retorna 1 caso os dados sejam salvos com sucesso

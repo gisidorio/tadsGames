@@ -112,11 +112,6 @@ public class CadastrarEmpresa implements Executavel, Registravel {
             
             retorno = empr.salvar();
             if (retorno) {
-//                HttpSession sessao = req.getSession();
-//                UsuarioFuncionario usuario = (UsuarioFuncionario)sessao.getAttribute("usuario");
-//                String acao = "cadastro de Empresa";
-//                GeraLog registro = new GeraLog();
-//                registro.escreverLog(usuario, acao, empr);
                 
                 CadastrarEmpresa registra = new CadastrarEmpresa();
                 registra.gerarLog(req, resp);

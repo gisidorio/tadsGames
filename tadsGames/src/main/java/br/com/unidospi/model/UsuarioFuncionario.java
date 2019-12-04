@@ -27,6 +27,15 @@ public class UsuarioFuncionario {
     private int idEmpresa;
 
     public UsuarioFuncionario(int idFuncionario, String nomeFuncionario, 
+            String sobrenome, String nomeUsuario, String departamento, String cargo) {
+        this.idFuncionario = idFuncionario;
+        this.nomeFuncionario = nomeFuncionario;
+        this.sobrenome = sobrenome;
+        this.nomeUsuario = nomeUsuario;
+        this.departamento = departamento;
+        this.cargo = cargo;
+    } 
+        public UsuarioFuncionario(int idFuncionario, String nomeFuncionario, 
             String sobrenome, String departamento, String cargo) {
         this.idFuncionario = idFuncionario;
         this.nomeFuncionario = nomeFuncionario;

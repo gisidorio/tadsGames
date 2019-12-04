@@ -87,9 +87,6 @@ public class CadastrarVenda implements Executavel, Registravel{
                 sessao.removeAttribute("idLinhaItemVenda");
                 sessao.removeAttribute("idCliente");
                 sessao.removeAttribute("nomeCliente2");
-//                String acao = "Venda";
-//                GeraLog registro = new GeraLog();
-//                registro.escreverLog(usuario, acao, venda);
 
                 CadastrarVenda registra = new CadastrarVenda();
                 registra.gerarLog(req, resp);

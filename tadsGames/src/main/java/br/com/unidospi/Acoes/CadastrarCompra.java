@@ -94,12 +94,6 @@ public class CadastrarCompra implements Executavel, Registravel{
 
                 EstoqueController.estocar(compra);
 
-//                HttpSession sessao = req.getSession();
-//                UsuarioFuncionario usuario = (UsuarioFuncionario)sessao.getAttribute("usuario");
-//                String acao = "Compra";
-//                GeraLog registro = new GeraLog();
-//                registro.escreverLog(usuario, acao, compra);
-                
                 CadastrarCompra registra = new CadastrarCompra();
                 registra.gerarLog(req, resp);
 
@@ -123,7 +117,7 @@ public class CadastrarCompra implements Executavel, Registravel{
         
         String acao = "compra";
         
-        Compra c = CompraDAO.ultCompra();
+            Compra c = CompraDAO.ultCompra();
         Produto produto = listarProduto(c.getIdProduto());
         
         try {

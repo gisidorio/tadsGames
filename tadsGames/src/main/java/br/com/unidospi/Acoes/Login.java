@@ -43,9 +43,6 @@ public class Login implements Executavel, Registravel {
             HttpSession sessao = req.getSession();
             sessao.setAttribute("usuario", usuario);
             
-//            String acao = "Login";
-//            GeraLog registro = new GeraLog();
-//            registro.escreverLog(usuario, acao, usuario);
             Login registra = new Login ();
             registra.gerarLog(req, resp);
             

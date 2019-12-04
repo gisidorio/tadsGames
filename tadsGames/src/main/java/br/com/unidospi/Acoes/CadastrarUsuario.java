@@ -78,11 +78,6 @@ public class CadastrarUsuario implements Executavel, Registravel {
 
             retorno = UsuarioDAO.salvar(usuario);
             if (retorno > 0){
-//                HttpSession sessao = req.getSession();
-//                UsuarioFuncionario u = (UsuarioFuncionario)sessao.getAttribute("usuario");
-//                String acao = "cadastro de Usuario";
-//                GeraLog registro = new GeraLog();
-//                registro.escreverLog(usuario, acao, u);
                 
                 CadastrarUsuario registra = new CadastrarUsuario();
                 registra.gerarLog(req, resp);
@@ -105,7 +100,7 @@ public class CadastrarUsuario implements Executavel, Registravel {
         UsuarioFuncionario usuario = (UsuarioFuncionario)sessao.getAttribute("usuario");
         
         String acao = "cadastro de usuario";
-        UsuarioFuncionario u = UsuarioDAO.obterUsuarioFuncionarioPorId(UsuarioDAO.ultUsuario());
+            UsuarioFuncionario u = UsuarioDAO.obterUsuarioFuncionarioPorId(UsuarioDAO.ultUsuario());
         
         try {
                     arquivo = new File(home);

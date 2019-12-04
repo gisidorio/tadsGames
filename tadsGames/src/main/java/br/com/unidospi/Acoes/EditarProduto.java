@@ -64,10 +64,6 @@ public class EditarProduto implements Executavel, Registravel {
 
         if (retorno) {
             HttpSession sessao = req.getSession();
-//            UsuarioFuncionario usuario = (UsuarioFuncionario)sessao.getAttribute("usuario");
-//            String acao = "edição de Produto";
-//            GeraLog registro = new GeraLog();
-//            registro.escreverLog(usuario, acao, p);
             
             sessao.setAttribute("produto", p);
             EditarProduto registra = new EditarProduto();
