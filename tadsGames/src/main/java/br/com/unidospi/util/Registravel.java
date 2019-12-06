@@ -13,7 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 
 /**
- *
+ * É NECESSÁRIO QUE O CAMINHO >> \\Documents\\NetBeansProjects\\tadsGames\\tadsGames\\Log << EXISTA NO COMPUTADOR,
+ * PARA O FUNCIONAMENTO CORRETO DA FUNÇÃO DE REGISTRO DE ATIVIDADES NO SISTEMA.
  * @author lucas.sfaria5
  */
 public interface Registravel {

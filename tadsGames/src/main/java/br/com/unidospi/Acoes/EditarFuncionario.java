@@ -2,11 +2,14 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+
+ * É NECESSÁRIO QUE O CAMINHO >> \\Documents\\NetBeansProjects\\tadsGames\\tadsGames\\Log << EXISTA NO COMPUTADOR,
+ * PARA O FUNCIONAMENTO CORRETO DA FUNÇÃO DE REGISTRO DE ATIVIDADES NO SISTEMA.
+
  */
 package br.com.unidospi.Acoes;
 
 import br.com.unidospi.DAO.FuncionarioDAO;
-import br.com.unidospi.model.Empresa;
 import br.com.unidospi.model.Funcionario;
 import br.com.unidospi.model.UsuarioFuncionario;
 import java.io.BufferedReader;

@@ -5,14 +5,7 @@
  */
 package br.com.unidospi.Acoes;
 
-import br.com.unidospi.Controller.ProdutoController;
-import static br.com.unidospi.DAO.EstoqueDAO.qtdEstoque;
-import br.com.unidospi.model.UsuarioFuncionario;
-import br.com.unidospi.model.VendaDetalhe;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,8 +19,7 @@ public class AdiconarCliente implements Executavel {
 
     @Override
     public String executa(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-        HttpSession sessao = req.getSession();
-        
+        HttpSession sessao = req.getSession();        
         String idCliente = req.getParameter("idCliente");
         if(!idCliente.equals("")){
             sessao.setAttribute("idCliente", req.getParameter("idCliente"));
